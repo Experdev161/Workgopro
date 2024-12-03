@@ -1,0 +1,779 @@
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    .background {
+        background-color: white;
+        padding: 0px;
+        transform: translateY(50px);
+        opacity: 0;
+        animation: slideUp 1s ease-out forwards;
+    }
+    
+    @keyframes slideUp {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    /********* Index Page *********/
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        background-color: white;
+        position: relative;
+    }
+    
+    header .logo {
+        font-size: .6rem;
+    }
+    
+    header .logo h1 {
+        color: grey;
+    }
+    
+    header .menubar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        top: 35px;
+        right: 40px;
+    }
+    
+    header .menubar span {
+        height: 3px;
+        background-color: grey;
+        border-radius: 2px;
+        display: none;
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 55px;
+    }
+    
+    header ul li {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    
+    header ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    header ul li button {
+        background: none;
+        border: none;
+        font-size: 16px;
+        align-items: center;
+    }
+    
+    header ul li .dropdown {
+        position: absolute;
+        z-index: 999;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 15px;
+        display: none;
+        top: 25px;
+        gap: 20px;
+    }
+    
+    header ul li .dropdown li {
+        padding: 10px;
+        border: 1px solid rgba(211, 211, 211, 0.7);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 12px;
+        width: 10rem;
+    }
+    
+    header .button button {
+        background-color: grey;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+    
+    header .button button a {
+        color: white;
+        text-decoration: none;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    
+    .services {
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .services .service {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+    
+    .services .service .box {
+        height: 15rem;
+        border-radius: 25px;
+        background-color: rgb(250, 245, 245);
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .services .service .box.first {
+        margin: 15px 20px 0 0;
+    }
+    
+    .services .service .box.second {
+        margin: 15px 15px 0 15px;
+    }
+    
+    .services .service .box.third {
+        margin: 15px 0 0 20px;
+    }
+    
+    .services .service .box img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    
+    .services .service .box h4 {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+    }
+    
+    .customer {
+        text-align: center;
+        background-color: lightgray;
+        padding: 20px;
+    }
+    
+    .customer .customers .comment {
+        background-color: white;
+        width: 25%;
+    }
+    
+    .FAQ {
+        padding: 25px;
+        text-align: center;
+    }
+    
+    .FAQ h1 {
+        opacity: .9;
+        text-align: left;
+    }
+    
+    .FAQ .questions {
+        border-bottom: .1px solid lightgrey;
+        padding-bottom: 7px;
+        text-align: left;
+    }
+    
+    .FAQ .questions .question {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: none;
+        border: none;
+        align-items: center;
+        padding-top: 5px;
+    }
+    
+    .FAQ .questions .question h3 {
+        opacity: .8;
+    }
+    
+    .FAQ .questions .question p {
+        font-size: 20px;
+        opacity: .7;
+    }
+    
+    .FAQ .questions .answer {
+        display: none;
+        padding-top: 5px;
+    }
+    
+    .FAQ .questions .answer p {
+        font-size: 15px;
+    }
+    
+    .FAQ .button button {
+        background-color: white;
+        padding: 10px 20px;
+        border: 1px solid blue;
+        border-radius: 10px;
+        height: 100%;
+        margin-top: 25px;
+    }
+    
+    .FAQ .button button a {
+        text-decoration: none;
+        color: blue;
+        font-size: .9rem;
+        font-weight: 600;
+    }
+    
+    footer {
+        background-color: rgba(211, 211, 211, 0.2);
+        padding: 25px;
+    }
+    
+    footer .mailing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 35px;
+        padding-top: 15px;
+    }
+    
+    footer .mailing .mailing-text h1 {
+        font-size: 20px;
+        opacity: .9;
+    }
+    
+    footer .mailing .mailing-text p {
+        font-size: 15px;
+        opacity: .7;
+    }
+    
+    footer .mailing .mailing-btn {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    footer .mailing .mailing-btn .input {
+        background-color: white;
+        border-radius: 10px;
+    }
+    
+    footer .mailing .mailing-btn .input input {
+        background: transparent;
+        padding: 10px;
+        border: none;
+        width: 17rem;
+    }
+    
+    footer .mailing .mailing-btn .btn button {
+        background-color: none;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid blue;
+        border-radius: 10px;
+        color: blue;
+        font-size: .9rem;
+        font-weight: 600;
+        height: 100%;
+    }
+    
+    footer .messages {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 5px 0;
+    }
+    
+    footer .messages .message {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    footer .messages .message h3 {
+        opacity: .98;
+        font-size: 15px;
+    }
+    
+    footer .messages .message.box p {
+        color: blue;
+    }
+    
+    footer .messages .message.btn p {
+        margin-bottom: 24px;
+        opacity: .9;
+    }
+    
+    footer .messages .message.btn button {
+        background-color: grey;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        width: 70%;
+    }
+    
+    footer .messages .message.btn button a {
+        color: white;
+        text-decoration: none;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    
+    footer .messages .message.copy p {
+        margin-bottom: 24px;
+        opacity: .9;
+    }
+    
+    footer .messages .message.copy .button button {
+        display: none;
+        background-color: grey;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+    
+    footer .messages .message.copy .button button a {
+        color: white;
+        text-decoration: none;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    
+    @media (max-width:956px) {
+        .services .service {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .services .service .box.first {
+            margin: 15px 15px 0 0;
+        }
+        .services .service .box.second {
+            margin: 15px 15px 0 0;
+        }
+        .services .service .box.third {
+            margin: 15px 15px 0 0;
+        }
+    }
+    
+    @media (max-width:638px) {
+        .services h1 {
+            font-size: 24px;
+        }
+        .services .service {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .services .service .box {
+            height: 19rem;
+        }
+        footer .mailing {
+            display: block;
+            text-align: center;
+        }
+        footer .mailing .mailing-text {
+            padding-bottom: 5px;
+            text-align: left;
+        }
+        footer .mailing .mailing-btn {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+        }
+        footer .mailing .mailing-btn .input {
+            width: 17rem;
+        }
+        footer .mailing .mailing-btn .btn {
+            margin-top: 10px;
+            text-align: left;
+        }
+        footer .mailing .mailing-btn .btn button {
+            padding: 7px;
+        }
+        footer .mailing .mailing-btn .btn button a {
+            font-size: .5rem;
+        }
+    }
+    
+    @media (max-width:700px) {
+        body {
+            position: relative;
+            min-height: 100%;
+        }
+        .background {
+            padding: 0;
+        }
+        header .menubar span {
+            display: block;
+            align-items: center;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        header .menubar.active span:nth-child(1) {
+            transform: rotate(40deg) translate(7px, 5px);
+        }
+        header .menubar.active span:nth-child(2) {
+            opacity: 0;
+        }
+        header .menubar.active span:nth-child(3) {
+            transform: rotate(-40deg) translate(7px, -5px);
+        }
+        header .display {
+            display: none;
+        }
+        header .button {
+            display: none;
+        }
+        header .display.active li {
+            position: relative;
+            display: flex;
+            overflow-y: visible;
+        }
+        header .display.active li .dropdown {
+            position: absolute;
+            z-index: 999;
+            right: 0;
+            top: 3.2rem;
+            align-items: center;
+        }
+        header .display.active li .dropdown li a {
+            color: black;
+        }
+        .display.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 4rem;
+            width: 40%;
+            right: 0;
+            background-color: lightgrey;
+            overflow: visible;
+            height: 45vh;
+            z-index: 10;
+            color: white;
+        }
+        header .display.active li a,
+        header .display.active li button {
+            color: white;
+        }
+        .services h1 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .services .service .box h4 {
+            font-size: 10px;
+        }
+        .FAQ h1 {
+            font-size: 17px;
+        }
+        .FAQ .questions .question {
+            justify-content: center;
+        }
+        .FAQ .questions .question h3 {
+            font-size: 12px;
+        }
+        .FAQ .questions .question p {
+            display: none;
+        }
+        .FAQ .button button {
+            padding: 7px 10px;
+        }
+        .FAQ .button button a {
+            font-size: .7rem;
+        }
+        footer .mailing {
+            display: block;
+            text-align: center;
+        }
+        footer .mailing .mailing-text {
+            padding-bottom: 5px;
+            text-align: left;
+        }
+        footer .mailing .mailing-btn {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+        }
+        footer .mailing .mailing-btn .btn {
+            margin-top: 10px;
+        }
+        footer .mailing .mailing-btn .btn button {
+            padding: 7px;
+        }
+        footer .mailing .mailing-btn .btn button a {
+            font-size: .5rem;
+        }
+        footer .messages .message.copy {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+        footer .messages .message.copy .button button {
+            display: block;
+        }
+        footer .messages .message.copy p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        footer .messages .message.box {
+            display: none;
+        }
+        footer .messages .message.btn {
+            display: none;
+        }
+    }
+    /********* About Page *********/
+    
+    .localexpert {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        align-items: center;
+    }
+    
+    .localexpert .expert {
+        width: 45%;
+    }
+    
+    .localexpert .image {
+        width: 45%;
+        height: 22rem;
+        overflow: hidden;
+    }
+    
+    .localexpert .image img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .locations {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        align-items: center;
+    }
+    
+    .locations .location {
+        width: 45%;
+    }
+    
+    .locations .location .services {
+        display: flex;
+        justify-content: left;
+        gap: 15rem;
+    }
+    
+    .locations .location .services .service {
+        display: block;
+    }
+    
+    .locations .location .services .service h3,
+    .locations .location .services .service p {
+        padding-bottom: 10px;
+    }
+    
+    .locations .image {
+        width: 45%;
+        height: 22rem;
+    }
+    
+    .locations .image img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .commentbox {
+        padding: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .comments {
+        position: relative;
+        width: 100%;
+        margin-inline: auto;
+        max-width: 1536px;
+        padding: 0 0 15rem 0;
+        overflow: hidden;
+        padding-top: 10px;
+    }
+    
+    @keyframes scrollLeft {
+        to {
+            left: -200px;
+        }
+    }
+    
+    @keyframes scrollRight {
+        to {
+            right: -200px;
+        }
+    }
+    
+    .comments .commentleft,
+    .comments .commentright {
+        background-color: white;
+        width: 17rem;
+        height: fit-content;
+        position: absolute;
+        border-radius: 15px;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        padding: 15px;
+    }
+    
+    .comments .commentleft .star,
+    .comments .commentright .star {
+        color: yellow;
+    }
+    
+    .comments .commentleft {
+        animation-name: scrollLeft;
+        left: max(calc( 17rem * 5), 100%);
+    }
+    
+    .comments .commentright {
+        animation-name: scrollRight;
+        right: max(calc( 17rem * 5), calc( 100% + 17rem));
+    }
+    
+    .comments .comment1 {
+        animation-delay: calc(30s / 5 * ( 5 - 1) * -1);
+    }
+    
+    .comments .comment2 {
+        animation-delay: calc(30s / 5 * ( 5 - 2) * -1);
+    }
+    
+    .comments .comment3 {
+        animation-delay: calc(30s / 5 * ( 5 - 3) * -1);
+    }
+    
+    .comments .comment4 {
+        animation-delay: calc(30s / 5 * ( 5 - 4) * -1);
+    }
+    
+    .comments .comment5 {
+        animation-delay: calc( 30s / 5 * ( 5 -5) * -1);
+    }
+    
+    @media (max-width:976px) {
+        .locations .location .services {
+            gap: 5rem;
+        }
+    }
+    
+    @media (max-width:600px) {
+        .localexpert {
+            display: block;
+            width: 100%;
+        }
+        .localexpert .image {
+            width: 100%;
+        }
+        .localexpert .expert {
+            width: 100%;
+        }
+        .locations {
+            display: block;
+        }
+        .locations .location {
+            width: 100%;
+        }
+        .locations .image {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width:450px) {
+        .background {
+            padding: 0;
+        }
+        .locations .location .services {
+            gap: 2rem;
+        }
+    }
+    /********* Contact Page *********/
+    
+    .contact-form {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 25px;
+    }
+    
+    .contact-form form {
+        text-align: left;
+        background-color: gray;
+        width: fit-content;
+        padding: 35px;
+        border-radius: 15px;
+    }
+    
+    .contact-form form .input {
+        padding-top: 12px;
+    }
+    
+    .contact-form form .input p {
+        font-size: 12px;
+        padding-bottom: 5px;
+    }
+    
+    .contact-form form .input input,
+    .contact-form form .input textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 15rem;
+    }
+    
+    .contact-form form .input {
+        text-align: center;
+    }
+    
+    .contact-form form .input.left {
+        text-align: left;
+    }
+    
+    .contact-form form .input button {
+        text-align: center;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid white;
+        border-radius: 10px;
+        color: white;
+        font-size: .9rem;
+        font-weight: 600;
+        height: 100%;
+        background: none;
+    }
+    
+    @media (max-width:598px) {
+        .contact-form {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-form .form-text {
+            margin-bottom: 15px;
+        }
+        .contact-form .form-text h1 {
+            font-size: 20px;
+        }
+    }

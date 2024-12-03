@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkGoPro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>WorkGoPro</h1>
+            <p>&nbsp;On-demand movers and handymen</p>
+        </div>
+        <div onclick="toggleMenu()" class="menubar" id="menubar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="display" class="display">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li>
+                    <button id="dropdown-btn" onclick="toggleGrid()">Services </button>
+                    <ul class="dropdown" id="dropdown">
+                        <li style="border-color: darkblue;">
+                            <img src="./images/repairs.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Apartment Repairs</a>
+                        </li>
+                        <li style="border-color: brown;">
+                            <img src="./images/maintenance.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Apartment Maintenance</a>
+                        </li>
+                        <li style="border-color: blue;">
+                            <img src="./images/moving.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Apartment Moving</a>
+                        </li>
+                        <li style="border-color: plum;">
+                            <img src="./images/renovation.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Apartment Renovations</a>
+                        </li>
+                        <li style="border-color: purple;">
+                            <img src="./images/emergency.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Emergency Services</a>
+                        </li>
+                        <li style="border-color: blueviolet;">
+                            <img src="./images/cleaning.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Cleaning & Restoration</a>
+                        </li>
+                        <li style="border-color: lightblue;">
+                            <img src="./images/handyman.png" alt="" style="width: 20px; height: 20px;">
+                            <a href="./contact.html">Handyman Services</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="button" id="button">
+            <button><a href="contact.html">Contact Now</a></button>
+        </div>
+    </header>
+    <div class="services">
+        <h1>Movers and handymen for any occasion</h1>
+        <div class="service">
+            <div class="box first">
+                <img src="images/apartment_moving.jpg" alt="">
+                <h4>Apartment Moving</h4>
+            </div>
+            <div class="box second">
+                <img src="images/delivery.jpg" alt="">
+                <h4>Delivery</h4>
+            </div>
+            <div class="box third">
+                <img src="images/apartment_repairs.jpg" alt="">
+                <h4>Apartment Repairs</h4>
+            </div>
+            <div class="box first">
+                <img src="images/apartment_maintenance.jpg" alt="">
+                <h4>Apartment Maintenance</h4>
+            </div>
+            <div class="box second">
+                <img src="images/apartment_rennovations.jpg" alt="">
+                <h4>Apartment Renovations</h4>
+            </div>
+            <div class="box third">
+                <img src="images/delivery.jpg" alt="">
+                <h4>Customised Requests</h4>
+            </div>
+        </div>
+    </div>
+    <div class="FAQ">
+        <h1>Frequently Asked Questions</h1>
+        <div class="questions">
+            <button onclick="faqDisplay(0)" id="button" class="question">
+                    <h3>What hours do you operate?</h3>
+                    <p>+</p>
+            </button>
+            <div class="answer" id="answer-0">
+                <p>You can schedule with us on Mondays to Saturdays. and you can contact if needed urgently and we'll be there in a short while or you can schedule for the time you need it done up to 15days in advance.</p>
+            </div>
+        </div>
+        <div class="questions">
+            <button onclick="faqDisplay(1)" id="button" class="question">
+                    <h3>Will movers bring my items inside?</h3>
+                    <p>+</p>
+            </button>
+            <div class="answer" id="answer-1">
+                <p>Yes ofcourse, movers will deliver your items as per your wish, whether you want it to be kept inside or given to you outside your compound.</p>
+            </div>
+        </div>
+        <div class="questions">
+            <button onclick="faqDisplay(2)" id="button" class="question">
+                    <h3>Will handymen take time while working?</h3>
+                    <p>+</p>
+                </button>
+            <div class="answer" id="answer-2">
+                <p>No they won't, they won't cause we work with time at workgopro.</p>
+            </div>
+        </div>
+        <div class="questions">
+            <button onclick="faqDisplay(3)" id="button" class="question">
+                    <h3>How much does a mover cost?</h3>
+                    <p>+</p>
+                </button>
+            <div class="answer" id="answer-3">
+                <p>Depends on the amount of loads to be moved, and the distance it would be moved through</p>
+            </div>
+        </div>
+        <div class="questions">
+            <button onclick="faqDisplay(4)" id="button" class="question">
+                    <h3>How much does an handyman service cost?</h3>
+                    <p>+</p>
+                </button>
+            <div class="answer" id="answer-4">
+                <p>Depends on the kind of service that you need</p>
+            </div>
+        </div>
+        <div class="questions">
+            <button onclick="faqDisplay(5)" id="button" class="question">
+                    <h3>How big are your delivery vehicles?</h3>
+                    <p>+</p>
+                </button>
+            <div class="answer" id="answer-5">
+                <p>Depends on the size you want. Whether big size trucks, delivery bikes, emergency vehicles and other varieties.</p>
+            </div>
+        </div>
+        <div class="questions">
+            <button onclick="faqDisplay(6)" id="button" class="question">
+                    <h3>How do i pay for the service that was rendered?</h3>
+                    <p>+</p>
+            </button>
+            <div class="answer" id="answer-6">
+                <p>You can pay after delivery of your service, Whether mover or handymen services.
+                </p>
+            </div>
+        </div>
+        <div class="button">
+            <button><a href="">Visit help center</a></button>
+        </div>
+    </div>
+    <footer>
+        <div class="mailing">
+            <div class="mailing-text">
+                <h1>Keep in touch</h1>
+                <p>Sign up for email announcements, deals, updates, and more!</p>
+            </div>
+            <form id="subscriptionform" class="mailing-btn" method="post" action="/subscribe">
+                <div class="input">
+                    <input autocomplete="email" type="email" name="email" id="email" placeholder="Email address..." required>
+                </div>
+                <div class="btn">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <div class="messages">
+            <div class="message box">
+                <h3>WorkGoPro</h3>
+                <p>Services</p>
+                <p>About</p>
+                <p>Support</p>
+            </div>
+            <div class="message btn">
+                <p>Move and fix anything, anywhere, anytime!</p>
+                <button><a href="contact.html">Contact Now</a></button>
+            </div>
+            <div class="message copy">
+                <div>
+                    <p>workgopro &copy; 2024</p>
+                </div>
+                <div class="button" id="button">
+                    <button><a href="contact.html">Contact Now</a></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleGrid() {
+            const dropdown = document.getElementById('dropdown');
+            const mediaQuery = window.matchMedia('(min-width:800px)');
+
+            function adjustGrid() {
+
+                if (mediaQuery.matches) {
+                    dropdown.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                    dropdown.style.display = 'grid';
+                } else {
+                    dropdown.style.gridTemplateColumns = 'repeat(1, 1fr)';
+                    dropdown.style.display = 'grid';
+                }
+            }
+            window.addEventListener('resize', () => {
+                if (dropdown.style.display === 'grid') {
+                    adjustGrid();
+                }
+            });
+
+
+            if (dropdown.style.display == 'none') {
+                adjustGrid()
+            } else {
+                dropdown.style.display = 'none'
+            }
+        }
+
+        function toggleMenu() {
+            const menuBar = document.getElementById('menubar');
+            const button = document.getElementById('button');
+            const display = document.getElementById('display');
+
+            menuBar.classList.toggle('active');
+            button.classList.toggle('active');
+            display.classList.toggle('active');
+        }
+
+        function faqDisplay(index) {
+
+            const answer = document.getElementById('answer-' + index);
+
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+        const subscriptionForm = document.getElementById('subscriptionform');
+
+
+        subscriptionForm.addEventListener('submit', (e) => {
+            const email = document.getElementById('email').value;
+            e.preventDefault();
+
+            if (email === "") {
+                alert('Email is required please enter your mail');
+            } else {
+                alert('Email have been successfully entered');
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkGoPro | contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <h1>WorkGoPro</h1>
+                <p>&nbsp;On-demand</p>
+            </div>
+            <div onclick="toggleMenu()" class="menubar" id="menubar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul id="display" class="display">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about\">About</a></li>
+                    <li>
+                        <button id="dropdown-btn" onclick="toggleGrid()">Services </button>
+                        <ul class="dropdown" id="dropdown">
+                            <li style="border-color: darkblue;">
+                                <img src="./images/repairs.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Apartment Repairs</a>
+                            </li>
+                            <li style="border-color: brown;">
+                                <img src="./images/maintenance.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Apartment Maintenance</a>
+                            </li>
+                            <li style="border-color: blue;">
+                                <img src="./images/moving.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Apartment Moving</a>
+                            </li>
+                            <li style="border-color: plum;">
+                                <img src="./images/renovation.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Apartment Renovations</a>
+                            </li>
+                            <li style="border-color: purple;">
+                                <img src="./images/emergency.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Emergency Services</a>
+                            </li>
+                            <li style="border-color: blueviolet;">
+                                <img src="./images/cleaning.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Cleaning & Restoration</a>
+                            </li>
+                            <li style="border-color: lightblue;">
+                                <img src="./images/handyman.png" alt="" style="width: 20px; height: 20px;">
+                                <a href="./contact.html">Handyman Services</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="button">
+                <button><a href="contact.html">Contact Now</a></button>
+            </div>
+        </header>
+        <div class="contact-form">
+            <div class="form-text">
+                <h1>Get in Touch <br> With Us Today</h1>
+                <p>Reach out for reliable movers and home service today!</p>
+            </div>
+            <form action="/contact" method="post" id="contactform">
+
+                <div class="input left">
+                    <p>*Your full name*</p>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="input left">
+                    <p>*Email Address*</p>
+                    <input type="email" name="email" id="emailc">
+                </div>
+                <div class="input left">
+                    <p>*Phone No.*</p>
+                    <input type="number" name="phoneno" id="phone">
+                </div>
+                <div class="input left">
+                    <p>*Your House Address*</p>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div class="input left">
+                    <p>*What's required*</p>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <div class="input">
+                    <button type="submit"> Contact</button>
+                </div>
+            </form>
+        </div>
+        <div class="locations">
+            <div class="location">
+                <h1>Your Trusted <br> Local Service Expert</h1>
+                <p>Discover top-rated movers, handyman specialists in your area. Fast, reliable, and professional services are just a click away to meet your needs</p>
+                <h2>All Services</h2>
+                <div class="services">
+                    <div class="service">
+                        <h3>Services</h3>
+                        <p>Handyman</p>
+                        <p>Movers</p>
+                    </div>
+                    <div class="service">
+                        <h3>Hours</h3>
+                        <p>9:00 AM - 6:00 AM</p>
+                        <p>8:00 AM - 7:00 AM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/map.jpg" alt="">
+            </div>
+        </div>
+        <footer>
+            <div class="mailing">
+                <div class="mailing-text">
+                    <h1>Keep in touch</h1>
+                    <p>Sign up for email announcements, deals, update, and more!</p>
+                </div>
+                <form id="subscriptionform" class="mailing-btn" method="post" action="/subscribe">
+                    <div class="input">
+                        <input autocomplete="email" type="email" name="email" id="email" placeholder="Email address..." required>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <div class="messages">
+                <div class="message box">
+                    <h3>WorkGoPro</h3>
+                    <p>Services</p>
+                    <p>About</p>
+                    <p>Support</p>
+                </div>
+                <div class="message btn">
+                    <p>Move and fix anything, anywhere, anytime!</p>
+                    <button><a href="contact.html">Contact Now</a></button>
+                </div>
+                <div class="message copy">
+                    <div>
+                        <p>workgopro &copy; 2024</p>
+                    </div>
+                    <div class="button" id="button">
+                        <button><a href="contact.html">Contact Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function toggleGrid() {
+            const dropdown = document.getElementById('dropdown');
+            const mediaQuery = window.matchMedia('(min-width:800px)');
+
+            function adjustGrid() {
+
+                if (mediaQuery.matches) {
+                    dropdown.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                    dropdown.style.display = 'grid';
+                } else {
+                    dropdown.style.gridTemplateColumns = 'repeat(1, 1fr)';
+                    dropdown.style.display = 'grid';
+                }
+            }
+            window.addEventListener('resize', () => {
+                if (dropdown.style.display === 'grid') {
+                    adjustGrid();
+                }
+            });
+
+
+            if (dropdown.style.display == 'none') {
+                adjustGrid()
+            } else {
+                dropdown.style.display = 'none'
+            }
+        }
+
+        function toggleMenu() {
+            const menuBar = document.getElementById('menubar');
+            const button = document.getElementById('button');
+            const display = document.getElementById('display');
+
+            menuBar.classList.toggle('active');
+            button.classList.toggle('active');
+            display.classList.toggle('active');
+        }
+
+        const subscriptionForm = document.getElementById('subscriptionform');
+
+        const contactForm = document.getElementById('contactform');
+
+        contactForm.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+
+            const emailC = document.getElementById('emailc').value;
+            const phoneno = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+
+            if (emailC === "" & phoneno === "" & address === "" & message === "" & name === "") {
+                alert('All fields are required');
+                emailC.style.border = '1px solid red';
+            } else if (phoneno === "" & address === "" & message === "" & name === "") {
+                alert('Some fields are required');
+            } else if (emailC === "" & address === "" & message === "" & name === "") {
+                alert('Some fields are required');
+            } else if (emailC === "" & phoneno === "" & message === "" & name === "") {
+                alert('Some fields are required');
+            } else if (emailC === "" & phoneno === "" & address === "" & name === "") {
+                alert('Some fields are required');
+            } else if (emailC === "" & phoneno === "" & address === "" & message === "") {
+                alert('Some fields are required');
+            } else if (emailC === "") {
+                alert('Email input is required');
+            } else if (phoneno === "") {
+                alert('Phone no input is required');
+            } else if (address === "") {
+                alert('House Address is required');
+            } else if (message === "") {
+                alert('What would you like to do');
+            } else if (name === "") {
+                alert('Full name input is required');
+            } else {
+                alert('Your order have been placed')
+            }
+        })
+        subscriptionForm.addEventListener('submit', (e) => {
+            const email = document.getElementById('email').value;
+            e.preventDefault();
+
+            if (email === "") {
+                alert('Email is required please enter your mail');
+            } else {
+                alert('Email have been successfully entered');
+            }
+        });
+    </script>
+</body>
+
+</html>
